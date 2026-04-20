@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Eason & Andy · 我们的九年</title>
+  <style>
+    :root {
+      --bg: #fff8f6;
+      --card: rgba(255,255,255,0.76);
+      --text: #3d2b2b;
+      --muted: #8b6f6f;
+      --accent: #d97782;
+      --accent-2: #f3b6bf;
+      --line: rgba(217,119,130,0.25);
+      --shadow: 0 18px 40px rgba(160, 98, 108, 0.14);
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      background:
+        radial-gradient(circle at top left, #ffe4ea 0, transparent 32%),
+        radial-gradient(circle at top right, #ffeef2 0, transparent 22%),
+        linear-gradient(180deg, #fffaf8 0%, #fff1f4 100%);
+      color: var(--text);
+      line-height: 1.75;
+    }
+
+    .wrap {
+      width: min(1000px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 32px 0 80px;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 72px 24px 48px;
+    }
+
+    .eyebrow {
+      color: var(--accent);
+      letter-spacing: 0.18em;
+      font-size: 13px;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(36px, 6vw, 64px);
+      line-height: 1.08;
+    }
+
+    .subtitle {
+      margin: 18px auto 0;
+      max-width: 720px;
+      color: var(--muted);
+      font-size: 18px;
+    }
+
+    .timer {
+      margin: 28px auto 0;
+      display: inline-flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .timer-card {
+      min-width: 92px;
+      padding: 14px 16px;
+      border-radius: 18px;
+      background: var(--card);
+      backdrop-filter: blur(10px);
+      box-shadow: var(--shadow);
+    }
+
+    .timer-card strong {
+      display: block;
+      font-size: 28px;
+      color: var(--accent);
+    }
+
+    .timer-card span {
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .section {
+      margin-top: 28px;
+      padding: 28px;
+      background: var(--card);
+      border: 1px solid rgba(255,255,255,0.65);
+      border-radius: 28px;
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(8px);
+    }
+
+    .section h2 {
+      margin: 0 0 14px;
+      font-size: 28px;
+    }
+
+    .lead {
+      color: var(--muted);
+      margin: 0;
+    }
+
+    .quote {
+      margin-top: 18px;
+      padding: 18px 20px;
+      background: rgba(243,182,191,0.18);
+      border-left: 4px solid var(--accent);
+      border-radius: 18px;
+      color: #6d4a4f;
+    }
+
+    .timeline {
+      position: relative;
+      margin-top: 18px;
+      padding-left: 20px;
+    }
+
+    .timeline::before {
+      content: "";
+      position: absolute;
+      left: 6px;
+      top: 8px;
+      bottom: 8px;
+      width: 2px;
+      background: var(--line);
+    }
+
+    .item {
+      position: relative;
+      padding: 0 0 28px 24px;
+    }
+
+    .item:last-child { padding-bottom: 0; }
+
+    .item::before {
+      content: "";
+      position: absolute;
+      left: -1px;
+      top: 10px;
+      width: 14px;
+      height: 14px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      box-shadow: 0 0 0 6px rgba(243,182,191,0.18);
+    }
+
+    .item .date {
+      color: var(--accent);
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    .item h3 {
+      margin: 0 0 8px;
+      font-size: 22px;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 14px;
+    }
+
+    .tag {
+      padding: 8px 12px;
+      background: rgba(255,255,255,0.65);
+      border-radius: 999px;
+      color: #80585e;
+      font-size: 14px;
+      border: 1px solid rgba(217,119,130,0.12);
+    }
+
+    .grid {
+      display: grid;
+      gap: 18px;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      margin-top: 18px;
+    }
+
+    .mini-card {
+      padding: 18px;
+      border-radius: 20px;
+      background: rgba(255,255,255,0.72);
+      border: 1px solid rgba(217,119,130,0.10);
+    }
+
+    .mini-card h3 {
+      margin: 0 0 8px;
+      font-size: 18px;
+    }
+
+    .footer-note {
+      text-align: center;
+      margin-top: 28px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    @media (max-width: 640px) {
+      .wrap { width: min(100%, calc(100% - 20px)); }
+      .hero { padding: 56px 12px 28px; }
+      .section { padding: 22px 18px; border-radius: 22px; }
+      h1 { font-size: 38px; }
+      .subtitle { font-size: 16px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <section class="hero">
+      <div class="eyebrow">For Eason & Andy</div>
+      <h1>我们已经一起走了很久很久</h1>
+      <p class="subtitle">
+        从 2016 年冬天第一次见面，到 2017 年 4 月 28 日正式在一起，
+        再到后来一起跨过异地、学业、工作、城市和生活。
+        这不是一个模板里的爱情故事，这是我们的九年。
+      </p>
+      <div class="timer" id="timer"></div>
+    </section>
+
+    <section class="section">
+      <h2>写在最前面</h2>
+      <p class="lead">
+        司徒志成，Eason。陈姿华，Andy。
+        如果把这些年压缩成一句话，大概就是：
+        我们不是突然变成彼此生命里重要的人，而是在一个又一个普通又特别的瞬间里，慢慢把彼此过成了习惯、牵挂、陪伴和未来。
+      </p>
+      <div class="quote">
+        生活还在继续，故事还在书写。<br />
+        但回过头看，原来我们已经一起走过了这么多地方、这么多年份、这么多难忘的时刻。
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>我们的时间线</h2>
+      <div class="timeline">
+        <article class="item">
+          <div class="date">2016.12.18</div>
+          <h3>第一次见面</h3>
+          <p>
+            那天我们在同一个房间里照顾老人。你高一，我高三。
+            虽然照顾的是不同的老人，但就是因为在同一个房间里，才有了最开始的搭话、拍照和聊天。
+            从那一天起，我们正式认识了彼此。
+          </p>
+          <div class="tags">
+            <span class="tag">师兄师妹</span>
+            <span class="tag">同一个房间</span>
+            <span class="tag">拍照</span>
+            <span class="tag">聊天</span>
+          </div>
+        </article>
+
+        <article class="item">
+          <div class="date">2016 年末 - 2017 年初</div>
+          <h3>开始喜欢你，也开始想办法靠近你</h3>
+          <p>
+            认识之后，我慢慢喜欢上了你。那时候的你在我眼里就是可可爱爱，有点蠢萌蠢萌的。
+            我想了很久，终于要到了你的微信。后来我们聊天、玩、互送生日礼物，还惊喜地发现原来住在同一个小区。
+            那时候我们都很害羞，礼物常常靠别人转交，或者放到某个地方后人先跑掉。
+          </p>
+          <div class="tags">
+            <span class="tag">要微信</span>
+            <span class="tag">同一个小区</span>
+            <span class="tag">害羞送礼物</span>
+          </div>
+        </article>
+
+        <article class="item">
+          <div class="date">2017.04.28</div>
+          <h3>我们正式在一起了</h3>
+          <p>
+            其实我追了你很久，大家都看出来了，只有你自己没看出来。
+            第一次告白时，你拒绝了我，不是因为讨厌我，只是你还没有准备好。
+            后来那天晚上，你把我约到楼下，说有事情要和我讲。其实我已经隐隐猜到了，
+            但当真正听到你说“我们在一起吧”的时候，我还是开心得不知道怎么形容。
+          </p>
+          <div class="tags">
+            <span class="tag">楼下</span>
+            <span class="tag">第一次告白被拒绝</span>
+            <span class="tag">终身难忘</span>
+          </div>
+        </article>
+
+        <article class="item">
+          <div class="date">2017 夏天</div>
+          <h3>第一次一起去香港</h3>
+          <p>
+            我们第一次自己出去玩，去了太平山顶。那天吹着风，吹着海风，喝着啤酒，一起散步，走了两万多步。
+            后来回头看，那时候的你圆圆的、不会化妆、体力却好得惊人。也是在那段时间里，我后来才发现，原来你刚在一起时就已经有咬人的习惯。
+          </p>
+          <div class="tags">
+            <span class="tag">太平山顶</span>
+            <span class="tag">海风</span>
+            <span class="tag">啤酒</span>
+            <span class="tag">两万步</span>
+          </div>
+        </article>
+
+        <article class="item">
+          <div class="date">2017.11.05 之后</div>
+          <h3>五千公里异地，但心一直连着</h3>
+          <p>
+            我去了澳洲，开始一段完全新的生活。新的朋友、新的语言、新的学校、新的环境，一切都很新鲜也很陌生。
+            但在这些变化里，少数没变的，是我对你的思念，也是你的陪伴。
+            很多人做不过异地这一关，但我们最后还是坚持下来了。
+          </p>
+          <div class="tags">
+            <span class="tag">澳洲</span>
+            <span class="tag">异地</span>
+            <span class="tag">五千公里</span>
+          </div>
+        </article>
+
+        <article class="item">
+          <div class="date">2018</div>
+          <h3>一周年，我把你的名字走进轨迹里</h3>
+          <p>
+            一周年纪念日，我用定位软件在学校里走出了你的名字，还给你写了一封平板手写信。
+            现在回头看，这些不算多宏大的事，却真的很像我们，一直在认真地爱、认真地记得。
+          </p>
+          <div class="tags">
+            <span class="tag">一周年</span>
+            <span class="tag">定位名字</span>
+            <span class="tag">手写信</span>
+          </div>
+        </article>
+
+        <article class="item">
+          <div class="date">2019</div>
+          <h3>你来到澳洲，我第一次有了“家”的感觉</h3>
+          <p>
+            这一年我记得特别深。你飞到悉尼来找我，我为了接你折腾了通宵大巴、学校过夜、凌晨巴士，最后终于接到了你。
+            后来我们在堪培拉一起过了三个月，去了悉尼大学、唐人街、歌剧院、Fish Market，吃了新鲜三文鱼和生蚝。
+            最重要的是，你让我第一次在异国真正有了“家”的感觉。
+            因为以前我深夜打工回来，面对的是黑漆漆的屋子；你在的时候，屋里亮着灯，有宵夜、有蛋糕、有面、有面包。
+          </p>
+          <div class="tags">
+            <span class="tag">悉尼接机</span>
+            <span class="tag">堪培拉三个月</span>
+            <span class="tag">第一次有家的感觉</span>
+          </div>
+        </article>
+
+        <article class="item">
+          <div class="date">2019 中秋到年末</div>
+          <h3>一起经历那些冷风、烟雾和回家的路</h3>
+          <p>
+            那年中秋，因为没带钥匙，我们在堪培拉寒冷的后门一起吃月饼、赏月，冻得瑟瑟发抖。
+            我们一起搬家，从乡村的 house 搬到市中心公寓，又一起遇到澳洲山火，城市烟雾缭绕，甚至响起烟雾警报。
+            但最后的最后，2019 年的结尾，我们还是一起从澳洲回到了大陆，回到了“我们家”。
+          </p>
+          <div class="tags">
+            <span class="tag">月饼赏月</span>
+            <span class="tag">搬家</span>
+            <span class="tag">山火</span>
+            <span class="tag">一起回家</span>
+          </div>
+        </article>
+
+        <article class="item">
+          <div class="date">2020</div>
+          <h3>一起面对现实生活，也一起把生活过得有声有色</h3>
+          <p>
+            疫情来得突然，我们试着去悉尼，最后却只在曼谷停留了一段时间，又一起回到大陆。
+            这一年，我们在金沙湾过纪念日，布置房间，养了小灰和小白，还一起去了白水寨、滨江摆摊、云南，登上了四千多米的玉龙雪山。
+            那些日子不容易，但也因为和你一起，变得特别鲜活。
+          </p>
+          <div class="tags">
+            <span class="tag">疫情</span>
+            <span class="tag">曼谷</span>
+            <span class="tag">小灰小白</span>
+            <span class="tag">玉龙雪山</span>
+          </div>
+        </article>
+
+        <article class="item">
+          <div class="date">2021 - 2022 之后</div>
+          <h3>从学生时代，慢慢走到真正一起过人生</h3>
+          <p>
+            后来的几年，并不是每一年都轻松，但我们都在往前走。
+            你毕业了，我开始新的工作，我们一起从学生变成打工人，也一起在香港开启新的生活。
+            我们一起去西安、杭州、珠海、贵阳、阳朔、无锡、内蒙古、腾冲、上海、太原，去听演唱会、看乐队、参加音乐节。
+            你送我的周杰伦门票，圆了我一个很重要的梦想。后来我们也有了越来越多只有彼此才懂的味道、地点和默契。
+          </p>
+          <div class="tags">
+            <span class="tag">从学生到打工人</span>
+            <span class="tag">香港新生活</span>
+            <span class="tag">周杰伦</span>
+            <span class="tag">第一次音乐节</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>这些年，属于我们的关键词</h2>
+      <div class="grid">
+        <div class="mini-card">
+          <h3>只有我们才懂的细节</h3>
+          <p>同一个小区、害羞转交礼物、咬人的习惯、楼下那次对话、冷风里的月饼、深夜回家亮着的灯。</p>
+        </div>
+        <div class="mini-card">
+          <h3>一起走过的地方</h3>
+          <p>香港、悉尼、堪培拉、曼谷、云南、玉龙雪山、杭州、西安、上海、珠海、阳朔、无锡、内蒙古、腾冲。</p>
+        </div>
+        <div class="mini-card">
+          <h3>一起熬过的事</h3>
+          <p>异地、疫情、生活转折、搬家、山火、毕业、找工作、进入社会，每一段都没有把我们冲散。</p>
+        </div>
+        <div class="mini-card">
+          <h3>一起拥有的生活感</h3>
+          <p>猫、宵夜、蛋糕、面包、散步、旅行、摆摊、纪念日布置、醉蟹、音乐节，还有越来越稳定的陪伴。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>写给 Andy</h2>
+      <p>
+        谢谢你从那个 2016 年冬天开始，一点一点走进我的生命里。
+        谢谢你让我在很多本来会孤单、辛苦、普通、甚至有点难熬的日子里，
+        最后都能因为“是和你一起”，而变得值得被记住。
+      </p>
+      <p>
+        我们已经一起走了快九年。
+        这九年里，有青涩的时候，有异地的时候，有奔波的时候，有辛苦的时候，
+        也有太多太多亮着灯、吹着风、走着路、笑着闹着、一起去看世界的时候。
+      </p>
+      <p>
+        以前我们一起长大，后来我们一起面对生活。
+        未来我也还想继续和你一起，把后面的故事一页一页写下去。
+      </p>
+      <div class="quote">
+        2016.12.18，我们第一次见面。<br />
+        2017.04.28，我们正式在一起。<br />
+        从那以后到今天，故事还没有写完。
+      </div>
+    </section>
+
+    <p class="footer-note">第一版纪念网站 · 本地可直接打开 · 后续还可以继续补照片、音乐、彩蛋和求婚版本</p>
+  </div>
+
+  <script>
+    const startDate = new Date('2017-04-28T00:00:00');
+    const timer = document.getElementById('timer');
+
+    function renderTimer() {
+      const now = new Date();
+      const diff = now - startDate;
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const years = Math.floor(days / 365.25);
+      const months = Math.floor((days % 365.25) / 30.44);
+      const remainDays = Math.floor(days - years * 365.25 - months * 30.44);
+
+      const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+
+      timer.innerHTML = `
+        <div class="timer-card"><strong>${years}</strong><span>年</span></div>
+        <div class="timer-card"><strong>${months}</strong><span>个月</span></div>
+        <div class="timer-card"><strong>${remainDays}</strong><span>天</span></div>
+        <div class="timer-card"><strong>${hours}</strong><span>小时</span></div>
+      `;
+    }
+
+    renderTimer();
+    setInterval(renderTimer, 60 * 1000);
+  </script>
+</body>
+</html>
