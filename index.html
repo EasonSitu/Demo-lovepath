@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>司徒智成 & Andy · 我们真的一起走了很久</title>
+  <meta name="description" content="司徒智成和 Andy 的九年纪念网站草稿，记录那些真的一起经历过的日子。" />
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <div class="stars"></div>
+
+  <div class="gate" id="gate">
+    <div class="gate-card">
+      <span class="eyebrow">Only for Andy</span>
+      <h1 class="gate-title">先输入一串只有你们才知道的数字</h1>
+      <p class="gate-text">
+        我把这一页先锁起来了。<br />
+        输入密码后，才会看到后面这些年真正留给你们的内容。
+      </p>
+      <form class="gate-form" id="gateForm">
+        <input
+          id="passwordInput"
+          class="gate-input"
+          type="password"
+          inputmode="numeric"
+          autocomplete="off"
+          placeholder="请输入密码"
+          aria-label="请输入密码"
+        />
+        <button class="btn btn-primary gate-btn" type="submit">进入</button>
+      </form>
+      <p class="gate-hint">提示：是 4 位数字</p>
+      <p class="gate-error" id="gateError"></p>
+    </div>
+  </div>
+
+  <main class="wrap site-shell is-locked" id="siteShell" aria-hidden="true">
+    <section class="hero splash reveal visible">
+      <div class="hero-card splash-card">
+        <div class="splash-copy">
+          <span class="eyebrow">Eason · Andy · since 2017.04.28 21:00</span>
+          <h1>给我们九周年，先做一个像样的开始。</h1>
+          <p class="hero-lead">
+            这不是最终版，也不是一页空泛情话。<br />
+            我想把它做成一个可以继续长大的纪念网站，先把故事、照片位、城市足迹、音乐位和彩蛋页都搭起来，
+            后面你们每补一次素材，它就更像你们自己的纪念馆。
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#story">看故事主线</a>
+            <a class="btn btn-secondary" href="#media">看照片预留位</a>
+          </div>
+        </div>
+        <div class="splash-panel">
+          <div class="timer-box">
+            <div class="timer-title">从 2017 年 4 月 28 日晚上 9 点到现在</div>
+            <div class="timer" id="timer"></div>
+          </div>
+          <div class="music-placeholder">
+            <div>
+              <div class="music-label">音乐开关占位</div>
+              <div class="music-name">以后这里可以接你们的专属 BGM</div>
+            </div>
+            <button class="music-btn" type="button" id="musicToggle">未接入</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal">
+      <h2>这版先把成品感搭起来</h2>
+      <p class="section-intro">
+        这一轮不是只改文案，而是先把网站骨架搭成一个后面能继续维护的版本。您之后只要往素材文件夹里放照片、票根、截图和音乐，就能继续往上长。
+      </p>
+      <div class="feature-grid">
+        <div class="card">
+          <h3>开场页</h3>
+          <p>先做进入前的第一感受，让它更像作品，而不是直接打开一大段正文。</p>
+        </div>
+        <div class="card">
+          <h3>照片位</h3>
+          <p>按主题留位，不乱塞假图，方便后面您直接把真实素材补进去。</p>
+        </div>
+        <div class="card">
+          <h3>城市足迹</h3>
+          <p>把一起去过的地方先做成视觉区块，后面可继续升级成地图版。</p>
+        </div>
+        <div class="card">
+          <h3>音乐开关占位</h3>
+          <p>先留真实按钮和状态位，后面接入音频文件即可，不需要重做结构。</p>
+        </div>
+        <div class="card">
+          <h3>彩蛋页入口</h3>
+          <p>把只有你们才懂的小细节收进去，做成一个更私人的隐藏页面。</p>
+        </div>
+        <div class="card">
+          <h3>可维护结构</h3>
+          <p>页面、样式、脚本、数据和素材目录都拆开，后面继续改不会越改越乱。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal">
+      <h2>我们的开头</h2>
+      <div class="opening-grid">
+        <div class="card">
+          <h3>不是一见钟情，是慢慢走近</h3>
+          <p>
+            2016 年 12 月 18 日，我们第一次见面。那时候我高三，你高一。
+            我们在同一个房间里照顾老人，照顾的是两个不同的老人，但因为在同一个房间，所以开始有了搭话、拍照和聊天。
+            后来我慢慢喜欢上你，想办法要到了你的微信，开始陪你聊天、陪你玩、聊吃的喝的和旅游。
+          </p>
+          <div class="small-quote">现在回头看，故事开始的时候，谁也不会想到后来会一起走这么远。</div>
+        </div>
+        <div class="note">
+          <h3>一些别人抄不走的细节</h3>
+          <p>
+            礼物常常通过别人转交，或者放到某个地方后人就先跑了。<br />
+            所有人都看出来我在追你，只有你自己没看出来。<br />
+            第一次告白被拒绝了，但不是因为你讨厌我，只是那时候你还没准备好。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal" id="story">
+      <h2>我们的故事，不按年份硬排，按阶段来记</h2>
+      <p class="section-intro">
+        我先按“相识、心动、学生时代、异地和澳洲、一起面对现实生活、一起长大后的几年”六段来整理。
+        每段先保留一句总结，再补 3 到 6 个事实点，这样以后继续补照片、写长文、做视频脚本都会更顺。
+      </p>
+
+      <article class="phase reveal">
+        <div class="phase-header">
+          <h3>01｜相识</h3>
+          <span>2016.12.18</span>
+        </div>
+        <p>故事开始于一个很普通的房间，但后来它成了我人生里很重要的一天。</p>
+        <ul class="facts">
+          <li>2016 年 12 月 18 日，我们第一次见面。</li>
+          <li>那时候我高三，你高一，是学校里的师兄师妹。</li>
+          <li>我们在同一个房间里照顾老人，但照顾的是两个不同的老人。</li>
+          <li>那天有搭话、拍照、聊天，也从那天开始，我们正式认识了彼此。</li>
+        </ul>
+        <div class="aside-tags">
+          <button class="tag" data-key="第一次见面">第一次见面</button>
+          <button class="tag" data-key="同一个房间">同一个房间</button>
+        </div>
+      </article>
+
+      <article class="phase reveal">
+        <div class="phase-header">
+          <h3>02｜心动和在一起</h3>
+          <span>2016 年末 - 2017.04.28</span>
+        </div>
+        <p>不是突然在一起的，是我先喜欢上你，然后想尽办法慢慢靠近。</p>
+        <ul class="facts">
+          <li>认识之后，我慢慢喜欢上了你，觉得你可可爱爱，还有点蠢萌蠢萌的。</li>
+          <li>我想了很久，终于要到了你的微信，后来我们开始聊天、一起玩，还互送生日礼物。</li>
+          <li>后来发现我们原来住在同一个小区。</li>
+          <li>那时候我们很害羞，礼物常常通过别人转交，或者放到某个地方后人先跑了。</li>
+          <li>第一次告白的时候，你拒绝了我，不是因为讨厌我，而是还没有准备好。</li>
+          <li>2017 年 4 月 28 日，你把我约到楼下，说“我们在一起吧”。</li>
+        </ul>
+        <div class="aside-tags">
+          <button class="tag" data-key="只有你没看出来">只有你没看出来</button>
+          <button class="tag" data-key="楼下">楼下</button>
+        </div>
+      </article>
+
+      <article class="phase reveal">
+        <div class="phase-header">
+          <h3>03｜学生时代的恋爱</h3>
+          <span>2017</span>
+        </div>
+        <p>那时候的我们很青涩，但也真的很快乐。</p>
+        <ul class="facts">
+          <li>在一起之后，我们一起约会、吃饭、散步、出去玩，度过了我高中最后几个月。</li>
+          <li>2017 年 7 月，我们第一次一起去香港，也是第一次自己出去玩。</li>
+          <li>那天去了太平山顶，吹海风、喝啤酒、散步，一天走了两万多步。</li>
+          <li>你那时候圆圆的，不太会化妆，但体力真的特别好。</li>
+          <li>后来翻相册我才发现，原来刚在一起的时候，你就已经有咬人的习惯。</li>
+        </ul>
+        <div class="aside-tags">
+          <button class="tag" data-key="两万步">两万步</button>
+          <button class="tag" data-key="圆圆的">圆圆的</button>
+          <button class="tag" data-key="咬人习惯">咬人习惯</button>
+        </div>
+      </article>
+
+      <article class="phase reveal">
+        <div class="phase-header">
+          <h3>04｜异地和澳洲</h3>
+          <span>2017.11 - 2019</span>
+        </div>
+        <p>这段最难，但也最能证明我们不是一时兴起。</p>
+        <ul class="facts">
+          <li>2017 年 11 月 5 日，我踏上去澳洲的飞机，后来我们开始了五千公里异地。</li>
+          <li>2018 年一周年，我用定位软件在学校里走出了你的名字，还写了一封手写信给你。</li>
+          <li>2019 年，你终于来澳洲找我。我为了接你，赶通宵大巴、在学校过夜、凌晨坐巴士去机场。</li>
+          <li>后来我们在堪培拉一起生活了三个月，去了悉尼大学、唐人街、歌剧院、Fish Market，还吃了三文鱼和生蚝。</li>
+          <li>那是我第一次真正有“家”的感觉，因为以前深夜回家只有黑漆漆的屋子，你在的时候会有灯、有宵夜、有蛋糕、有面、有面包。</li>
+          <li>那年中秋我们没带钥匙，在后门吃月饼、赏月、冻得发抖；后来又一起搬家、遇上澳洲山火，最后一起回到大陆。</li>
+        </ul>
+        <div class="aside-tags">
+          <button class="tag" data-key="五千公里">五千公里</button>
+          <button class="tag" data-key="家的感觉">家的感觉</button>
+          <button class="tag" data-key="后门吃月饼">后门吃月饼</button>
+        </div>
+      </article>
+
+      <article class="phase reveal">
+        <div class="phase-header">
+          <h3>05｜一起面对现实生活</h3>
+          <span>2020 - 2021</span>
+        </div>
+        <p>从这里开始，我们不只是谈恋爱，也开始一起过生活。</p>
+        <ul class="facts">
+          <li>2020 年因为疫情，我们尝试去悉尼，最后只在曼谷待了一段时间，然后又回了大陆。</li>
+          <li>那年我们在金沙湾过纪念日，布置了房间。</li>
+          <li>也是这一年，我们有了自己的两只猫，小灰和小白。</li>
+          <li>我们一起去了白水寨，也在滨江摆摊，一起过了很多很生活化的夜晚。</li>
+          <li>后来又去了云南，登上了四千多米的玉龙雪山。</li>
+          <li>2021 年你说是并不轻松的一年，这一段我先给你留位置，后面等你补更多细节。</li>
+        </ul>
+        <div class="aside-tags">
+          <button class="tag" data-key="小灰小白">小灰小白</button>
+          <button class="tag" data-key="滨江摆摊">滨江摆摊</button>
+        </div>
+      </article>
+
+      <article class="phase reveal">
+        <div class="phase-header">
+          <h3>06｜一起长大后的几年</h3>
+          <span>2022 - 现在</span>
+        </div>
+        <p>后来的我们，已经不是学生时代单纯地恋爱，而是真的一起过人生。</p>
+        <ul class="facts">
+          <li>2022 年是人生转折点，我们开始实习、开始工作，从学生变成打工人。</li>
+          <li>我们一起在香港开始新的生活，也一起走进新的行业和新的阶段。</li>
+          <li>后来我们去了很多地方，包括西安、杭州、珠海、阳朔、无锡、内蒙古、腾冲、上海、太原等。</li>
+          <li>你送了我周杰伦的门票，这件事对我意义很大，因为它圆了我一个人生梦想。</li>
+          <li>我们一起看演出、看乐队、参加音乐节，也一起形成了很多只有我们才懂的饮食和旅行记忆。</li>
+          <li>比如杭州醉蟹，比如江浙味道，比如后来每次去江浙都想吃很多很多螃蟹。</li>
+        </ul>
+        <div class="aside-tags">
+          <button class="tag" data-key="打工人">打工人</button>
+          <button class="tag" data-key="醉蟹">醉蟹</button>
+        </div>
+      </article>
+    </section>
+
+    <section class="section reveal" id="media">
+      <h2>这里预留给照片、视频、票根和截图</h2>
+      <p class="section-intro">
+        这一步我先不给您硬塞假图，而是把最值得补的证据位先留好。后面您有素材，直接往这些位置补，网页就会从“好看的网页”变成“你们的纪念馆”。
+      </p>
+      <div class="media-grid">
+        <div class="media-slot">
+          <h3>第一次香港</h3>
+          <p>优先放第一次去香港的照片，最好有太平山顶、夜景、走路、喝啤酒的感觉。</p>
+        </div>
+        <div class="media-slot">
+          <h3>澳洲三个月</h3>
+          <p>悉尼接机、堪培拉同住、唐人街、歌剧院、Fish Market、家里亮着灯的生活感。</p>
+        </div>
+        <div class="media-slot">
+          <h3>一周年名字轨迹</h3>
+          <p>定位软件走名字的截图、手写信的局部，都很有“别人抄不走”的证据感。</p>
+        </div>
+        <div class="media-slot">
+          <h3>小灰和小白</h3>
+          <p>猫一定要单独留位置，这不是配图，是你们一起生活的证据。</p>
+        </div>
+        <div class="media-slot">
+          <h3>演唱会 / 音乐节 / 票根</h3>
+          <p>周杰伦门票、音乐节手环、乐队演出现场，都非常适合做时间线旁边的小证据。</p>
+        </div>
+        <div class="media-slot">
+          <h3>生活里的小图</h3>
+          <p>月饼、夜景、机场、摆摊、醉蟹、聊天记录、礼物、纪念日布置，这些都比空泛抒情更能打动人。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal" id="cities">
+      <div class="section-headline">
+        <div>
+          <h2>城市足迹区</h2>
+          <p class="section-intro">现在先做成可看的足迹区，后面如果您想升级成地图，我可以直接在这块继续迭代。</p>
+        </div>
+      </div>
+      <div class="journey-board" id="journeyBoard"></div>
+    </section>
+
+    <section class="section reveal">
+      <h2>写给 Andy</h2>
+      <div class="closing-grid">
+        <div class="closing-letter">
+          谢谢你从 2016 年冬天开始，一点一点走进我的生活。<br />
+          谢谢你陪我从学生时代走到现在，陪我熬过异地、转折、工作和生活里很多并不轻松的阶段。<br /><br />
+          有些回忆现在看起来很小，比如礼物放下就跑，比如后门吃月饼，比如深夜回家看见灯亮着。<br />
+          可真正让我舍不得忘的，恰恰就是这些小事。<br /><br />
+          因为它们让我很确定，后来这么多年，不是我一个人在过人生，而是我们一直都在一起往前走。
+        </div>
+        <div class="note">
+          <h3>这一页接下来还能继续长</h3>
+          <p>
+            后面您补照片、票根、视频、聊天记录之后，这个站会更像“你们自己的纪念馆”。
+            现在这版我先把结构和语气改正，把模板感压下去，把你们自己的细节、口气和证据位撑起来。
+          </p>
+          <div class="small-quote">下一步最值钱的，不是继续加特效，而是把真实素材补进去。</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal easter" id="easter">
+      <h2>彩蛋页</h2>
+      <p class="section-intro">
+        这一页故意做得更私密一点，适合放只有你们自己看得懂的小暗号、小习惯、小玩笑。
+      </p>
+      <div class="easter-card">
+        <div>
+          <h3>只有你们才懂的东西</h3>
+          <ul class="facts compact">
+            <li>礼物放下就跑</li>
+            <li>后门吃月饼</li>
+            <li>深夜回家看到灯亮着</li>
+            <li>小灰和小白</li>
+            <li>杭州醉蟹和很多很多螃蟹</li>
+          </ul>
+        </div>
+        <div class="small-quote">这一块以后最适合补聊天截图、语音转文字、小纸条、甚至一句只有她看得懂的话。</div>
+      </div>
+    </section>
+
+    <p class="footer-note">第四版草稿 · 已加入开场页、密码门、照片位、城市足迹区、音乐开关占位与彩蛋页</p>
+  </main>
+
+  <script src="./data.js"></script>
+  <script src="./script.js"></script>
+</body>
+</html>
