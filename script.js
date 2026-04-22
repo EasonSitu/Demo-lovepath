@@ -230,9 +230,9 @@ function bindGate() {
 
 function updateMusicButton(playing) {
   if (!musicToggle) return;
-  musicToggle.textContent = playing ? '暂停音乐' : '播放音乐';
+  musicToggle.textContent = playing ? '暂停 Mojito' : '播放 Mojito';
   if (musicStatus) {
-    musicStatus.textContent = bgMusic?.src ? (playing ? '正在播放你们的 BGM' : '已接入音乐，点一下就能播') : '暂未放入音频文件';
+    musicStatus.textContent = bgMusic?.src ? (playing ? '正在播放周杰伦《Mojito》' : '《Mojito》已接入，点一下就能播放') : '暂未放入音频文件';
   }
 }
 
@@ -243,7 +243,7 @@ function bindMusic() {
 
   musicToggle.addEventListener('click', async () => {
     if (!hasSource || !bgMusic) {
-      alert('音乐开关已经接好了，但当前还没有音频文件。后面把 mp3 放进 assets/audio/ 并改一下 data 或标签就能直接播。');
+      alert('音乐开关已经接好了，但当前还没有音频文件。后面把音频放进 assets/audio/ 并改一下标签就能直接播。');
       return;
     }
 
