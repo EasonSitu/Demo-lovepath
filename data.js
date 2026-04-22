@@ -7,6 +7,89 @@ window.SITE_DATA = {
   },
   password: '0117',
   startDate: '2017-04-28T21:00:00',
+  heroGallery: [
+    {
+      src: './assets/images/01-第一次香港/香港之行照片1.jpeg',
+      alt: '第一次香港之行照片 1',
+      caption: '第一次一起去香港，故事第一次有了“我们出去看看”的样子。'
+    },
+    {
+      src: './assets/images/02-澳洲三个月/来澳洲找我1.jpeg',
+      alt: '来澳洲找我 1',
+      caption: '异地很远，但你真的来到了我身边。'
+    },
+    {
+      src: './assets/images/07-国内旅行/上海迪士尼1.jpeg',
+      alt: '上海迪士尼',
+      caption: '后来一起去了更多地方，快乐也越来越具体。'
+    }
+  ],
+  memoryWall: [
+    {
+      title: '第一次香港',
+      text: '先把昨天新增的两张香港照片放进来，正好接住学生时代第一次自由出走。',
+      items: [
+        './assets/images/01-第一次香港/香港之行照片1.jpeg',
+        './assets/images/01-第一次香港/香港之行照片2.jpeg'
+      ]
+    },
+    {
+      title: '澳洲与异地',
+      text: '这组图最适合放在“异地和澳洲”这一段，既有接你，也有一起生活的证据感。',
+      items: [
+        './assets/images/02-澳洲三个月/来澳洲找我1.jpeg',
+        './assets/images/02-澳洲三个月/来澳洲找我2.jpeg',
+        './assets/images/02-澳洲三个月/澳洲第一次回来.jpeg',
+        './assets/images/02-澳洲三个月/澳洲第一次回来2.jpeg',
+        './assets/images/02-澳洲三个月/曼谷.jpeg'
+      ]
+    },
+    {
+      title: '票根与梦想',
+      text: '周杰伦门票单独成组，它不是普通票根，是重要的人生记忆。',
+      items: [
+        './assets/images/05-演唱会音乐节票根/山西 周杰伦.jpeg'
+      ]
+    },
+    {
+      title: '生活碎片',
+      text: '纪念日、礼物、毕业、广州和云南，这些小图最能把“我们在过生活”这件事落地。',
+      items: [
+        './assets/images/06-生活碎片/4周年.jpeg',
+        './assets/images/06-生活碎片/第一次520礼物.jpeg',
+        './assets/images/06-生活碎片/高中毕业合影.jpeg',
+        './assets/images/06-生活碎片/广州.jpeg',
+        './assets/images/06-生活碎片/云南.jpeg'
+      ]
+    },
+    {
+      title: '后来去过的地方',
+      text: '把新增旅行照放进“长大后的几年”，画面会比纯文字有说服力很多。',
+      items: [
+        './assets/images/07-国内旅行/成都1.jpeg',
+        './assets/images/07-国内旅行/西江苗寨.jpeg',
+        './assets/images/07-国内旅行/呼和浩特.jpeg',
+        './assets/images/07-国内旅行/呼和浩特1.jpeg',
+        './assets/images/07-国内旅行/上海迪士尼1.jpeg'
+      ]
+    }
+  ],
+  scrapbookNotes: [
+    '2016.12.18 第一次见面，同一个房间，故事开始。',
+    '2017.04.28 楼下那一句“我们在一起吧”。',
+    '2019 你来澳洲找我，异地终于有了拥抱。',
+    '后来一起看演出、去旅行、过纪念日，也一起把生活过成了真的生活。'
+  ],
+  guestbookSeed: [
+    {
+      author: 'Eason',
+      text: '如果这页以后每年都还能继续补，那它就不只是纪念页，而是我们一起留下来的时间。'
+    },
+    {
+      author: 'Andy',
+      text: '愿以后每次回来看，都能想起当时为什么会笑。'
+    }
+  ],
   tagNotes: {
     '第一次见面': '第一次见面的时候，大概谁都没想过后来会走到九年。',
     '同一个房间': '同一个房间这个细节，真的很像命运悄悄给我们开的门。',

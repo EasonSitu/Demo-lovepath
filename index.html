@@ -42,13 +42,13 @@
           <span class="eyebrow">Eason · Andy · since 2017.04.28 21:00</span>
           <h1>给我们九周年，先做一个像样的开始。</h1>
           <p class="hero-lead">
-            这不是最终版，也不是一页空泛情话。<br />
-            我想把它做成一个可以继续长大的纪念网站，先把故事、照片位、城市足迹、音乐位和彩蛋页都搭起来，
-            后面你们每补一次素材，它就更像你们自己的纪念馆。
+            这次不只是搭骨架了。<br />
+            我把昨天新加的照片先挑了一轮，塞进更合适的位置，再补上照片墙、留言板、灯箱预览和音乐开关，
+            让这一版已经有纪念馆的感觉，而不只是一个半成品页面。
           </p>
           <div class="hero-actions">
             <a class="btn btn-primary" href="#story">看故事主线</a>
-            <a class="btn btn-secondary" href="#media">看照片预留位</a>
+            <a class="btn btn-secondary" href="#memoryWall">看新增照片</a>
           </div>
         </div>
         <div class="splash-panel">
@@ -58,46 +58,59 @@
           </div>
           <div class="music-placeholder">
             <div>
-              <div class="music-label">音乐开关占位</div>
-              <div class="music-name">以后这里可以接你们的专属 BGM</div>
+              <div class="music-label">专属 BGM 开关</div>
+              <div class="music-name" id="musicStatus">音乐开关已接好，公开版暂不内置音频文件</div>
             </div>
-            <button class="music-btn" type="button" id="musicToggle">未接入</button>
+            <button class="music-btn" type="button" id="musicToggle">播放音乐</button>
           </div>
+          <audio id="bgMusic" preload="none" loop>
+            <!-- 本地自用可放入音频文件后启用 -->
+          </audio>
         </div>
       </div>
     </section>
 
     <section class="section reveal">
-      <h2>这版先把成品感搭起来</h2>
+      <h2>这版先把成品感和真实素材接起来</h2>
       <p class="section-intro">
-        这一轮不是只改文案，而是先把网站骨架搭成一个后面能继续维护的版本。您之后只要往素材文件夹里放照片、票根、截图和音乐，就能继续往上长。
+        这一轮不只是加文案，我直接把昨天新增的照片先整理进网页里，并补了几个真正有用的互动区，后面您继续补素材时不会越改越乱。
       </p>
       <div class="feature-grid">
         <div class="card">
-          <h3>开场页</h3>
-          <p>先做进入前的第一感受，让它更像作品，而不是直接打开一大段正文。</p>
+          <h3>新增照片已入场</h3>
+          <p>把香港、澳洲、旅行、生活碎片和票根分组放进对应位置，不再只是占位说明。</p>
         </div>
         <div class="card">
-          <h3>照片位</h3>
-          <p>按主题留位，不乱塞假图，方便后面您直接把真实素材补进去。</p>
+          <h3>顶部精选图</h3>
+          <p>首页一打开就能先看到代表性的几张图，第一感受更像成品。</p>
         </div>
         <div class="card">
-          <h3>城市足迹</h3>
-          <p>把一起去过的地方先做成视觉区块，后面可继续升级成地图版。</p>
+          <h3>照片灯箱</h3>
+          <p>点击照片可放大预览，手机上看也更顺手。</p>
         </div>
         <div class="card">
-          <h3>音乐开关占位</h3>
-          <p>先留真实按钮和状态位，后面接入音频文件即可，不需要重做结构。</p>
+          <h3>留言板</h3>
+          <p>可以直接在本机留下小句子，适合以后继续补你们自己的话。</p>
         </div>
         <div class="card">
-          <h3>彩蛋页入口</h3>
-          <p>把只有你们才懂的小细节收进去，做成一个更私人的隐藏页面。</p>
+          <h3>音乐开关</h3>
+          <p>结构已接好，后面放进音频文件就能变成真的专属 BGM。</p>
         </div>
         <div class="card">
-          <h3>可维护结构</h3>
-          <p>页面、样式、脚本、数据和素材目录都拆开，后面继续改不会越改越乱。</p>
+          <h3>可继续扩展</h3>
+          <p>后续还可以继续加视频、地图、时间轴细化和更多私密彩蛋。</p>
         </div>
       </div>
+    </section>
+
+    <section class="section reveal hero-gallery-section">
+      <div class="section-headline">
+        <div>
+          <h2>先看几张最有感觉的</h2>
+          <p class="section-intro">这一排是我先帮您挑出来的开场图，适合一打开就把气氛撑起来。</p>
+        </div>
+      </div>
+      <div class="hero-gallery" id="heroGallery"></div>
     </section>
 
     <section class="section reveal">
@@ -250,35 +263,43 @@
       </article>
     </section>
 
-    <section class="section reveal" id="media">
-      <h2>这里预留给照片、视频、票根和截图</h2>
+    <section class="section reveal" id="memoryWall">
+      <h2>昨天新增的照片，我先替您编进网页里了</h2>
       <p class="section-intro">
-        这一步我先不给您硬塞假图，而是把最值得补的证据位先留好。后面您有素材，直接往这些位置补，网页就会从“好看的网页”变成“你们的纪念馆”。
+        我没有一股脑全堆在一起，而是按“第一次香港、澳洲与异地、票根与梦想、生活碎片、后来旅行”五组去放，这样每组都更有叙事感。
+      </p>
+      <div class="memory-wall" id="memoryWall"></div>
+    </section>
+
+    <section class="section reveal" id="media">
+      <h2>网页里的素材区，现在已经不只是占位</h2>
+      <p class="section-intro">
+        这块现在同时承担“补素材”和“继续扩展”的作用。后面您如果要加视频、聊天截图或者更多票根，可以直接接着往这些组里放。
       </p>
       <div class="media-grid">
-        <div class="media-slot">
+        <div class="media-slot is-filled">
           <h3>第一次香港</h3>
-          <p>优先放第一次去香港的照片，最好有太平山顶、夜景、走路、喝啤酒的感觉。</p>
+          <p>已接入昨天新增的香港照片，直接对应学生时代第一次一起自由出走。</p>
         </div>
-        <div class="media-slot">
+        <div class="media-slot is-filled">
           <h3>澳洲三个月</h3>
-          <p>悉尼接机、堪培拉同住、唐人街、歌剧院、Fish Market、家里亮着灯的生活感。</p>
+          <p>已放入来澳洲找你、澳洲回来和曼谷相关照片，跟“异地和澳洲”这一段已经接上。</p>
         </div>
         <div class="media-slot">
           <h3>一周年名字轨迹</h3>
-          <p>定位软件走名字的截图、手写信的局部，都很有“别人抄不走”的证据感。</p>
+          <p>这一组暂时还缺截图或手写信局部，后面一补上会很有“别人抄不走”的感觉。</p>
         </div>
         <div class="media-slot">
           <h3>小灰和小白</h3>
-          <p>猫一定要单独留位置，这不是配图，是你们一起生活的证据。</p>
+          <p>猫的专区我先留着，等您把照片补进来，这块会立刻很出彩。</p>
         </div>
-        <div class="media-slot">
+        <div class="media-slot is-filled">
           <h3>演唱会 / 音乐节 / 票根</h3>
-          <p>周杰伦门票、音乐节手环、乐队演出现场，都非常适合做时间线旁边的小证据。</p>
+          <p>周杰伦门票已经放入照片墙，后续还能继续补更多票根、手环和现场图。</p>
         </div>
-        <div class="media-slot">
+        <div class="media-slot is-filled">
           <h3>生活里的小图</h3>
-          <p>月饼、夜景、机场、摆摊、醉蟹、聊天记录、礼物、纪念日布置，这些都比空泛抒情更能打动人。</p>
+          <p>4 周年、520 礼物、毕业合影、广州、云南都已经进站，这些比空泛情话更有力。</p>
         </div>
       </div>
     </section>
@@ -291,6 +312,39 @@
         </div>
       </div>
       <div class="journey-board" id="journeyBoard"></div>
+    </section>
+
+    <section class="section reveal scrapbook-section">
+      <div class="section-headline">
+        <div>
+          <h2>纪念簿</h2>
+          <p class="section-intro">我顺手加了一个轻量纪念簿，把关键节点先钉下来，后面也可以继续往里补。</p>
+        </div>
+      </div>
+      <ul class="scrapbook-notes" id="scrapbookNotes"></ul>
+    </section>
+
+    <section class="section reveal guestbook-section">
+      <div class="section-headline">
+        <div>
+          <h2>留言板</h2>
+          <p class="section-intro">可以在本机直接写下一句想留给彼此的话，刷新后也还会保留。</p>
+        </div>
+      </div>
+      <div class="guestbook-grid">
+        <div class="guestbook-list" id="guestbookList"></div>
+        <form class="guestbook-form" id="guestbookForm">
+          <label>
+            署名
+            <input id="guestbookName" type="text" maxlength="20" placeholder="比如：Eason / Andy" />
+          </label>
+          <label>
+            留一句话
+            <textarea id="guestbookMessage" rows="5" maxlength="240" placeholder="写一句现在想留下来的话吧"></textarea>
+          </label>
+          <button class="btn btn-primary" type="submit">写进留言板</button>
+        </form>
+      </div>
     </section>
 
     <section class="section reveal">
@@ -306,10 +360,10 @@
         <div class="note">
           <h3>这一页接下来还能继续长</h3>
           <p>
-            后面您补照片、票根、视频、聊天记录之后，这个站会更像“你们自己的纪念馆”。
-            现在这版我先把结构和语气改正，把模板感压下去，把你们自己的细节、口气和证据位撑起来。
+            这次已经先把昨天新增的照片接进来了，后面您再补猫、轨迹图、聊天截图和音频文件，整个站就会更完整。
+            结构我已经先理顺，后续加内容不会很痛苦。
           </p>
-          <div class="small-quote">下一步最值钱的，不是继续加特效，而是把真实素材补进去。</div>
+          <div class="small-quote">下一步最值钱的，是把缺的猫照、一周年轨迹和专属 BGM 补上。</div>
         </div>
       </div>
     </section>
@@ -334,7 +388,7 @@
       </div>
     </section>
 
-    <p class="footer-note">第四版草稿 · 已加入开场页、密码门、照片位、城市足迹区、音乐开关占位与彩蛋页</p>
+    <p class="footer-note">第五版草稿 · 已接入新增照片、照片墙、留言板、灯箱预览、音乐开关与彩蛋页</p>
   </main>
 
   <script src="./data.js"></script>
