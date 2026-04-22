@@ -343,7 +343,8 @@ h1 {
 .journey-board,
 .hero-gallery,
 .memory-wall,
-.guestbook-grid {
+.guestbook-grid,
+.video-memory-card {
   display: grid;
   gap: 16px;
 }
@@ -361,7 +362,9 @@ h1 {
 .media-slot,
 .phase,
 .note,
-.easter-card {
+.easter-card,
+.video-copy,
+.video-frame {
   background: rgba(255,255,255,0.045);
   border: 1px solid rgba(255,255,255,0.08);
   border-radius: var(--radius);
@@ -375,7 +378,8 @@ h1 {
 .easter-card h3,
 .memory-group h3,
 .hero-shot figcaption,
-.guestbook-item strong {
+.guestbook-item strong,
+.video-copy h3 {
   margin: 0 0 10px;
   font-size: 20px;
   color: #fff4f8;
@@ -387,7 +391,8 @@ h1 {
 .note p,
 .easter-card p,
 .memory-group p,
-.guestbook-item p {
+.guestbook-item p,
+.video-copy p {
   margin: 0;
   color: var(--muted);
   line-height: 1.75;
@@ -658,6 +663,18 @@ h1 {
   min-height: 120px;
 }
 
+.video-frame {
+  padding: 12px;
+}
+
+.video-frame video {
+  width: 100%;
+  display: block;
+  border-radius: 18px;
+  background: #000;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.25);
+}
+
 
 .closing-letter {
   padding: 20px;
@@ -735,7 +752,8 @@ h1 {
   .closing-grid,
   .easter-card,
   .hero-gallery,
-  .guestbook-grid {
+  .guestbook-grid,
+  .video-memory-card {
     grid-template-columns: 1fr;
   }
 
